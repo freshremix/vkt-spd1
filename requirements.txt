@@ -9,4 +9,4 @@ spotipy
 requests
 yt-dlp==2022.9.1
 youtube_dl
-python-ffmpeg
+imageio-ffmpeg==0.4.7
