@@ -11,6 +11,4 @@ yt-dlp==2022.9.1
 youtube_dl
 ffmpegio==0.7.0
 ffprobe
-git+https://github.com/Franky1/Streamlit-ffmpeg-Test.git
-ffmpeg-python
-streamlit
+git+https://github.com/kkroening/ffmpeg-python.git
