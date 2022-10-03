@@ -1,4 +1,9 @@
 ffmpeg
 cmus-plugin-ffmpeg
 baresip-ffmpeg
-ddupdate
+gcc
+libsqlite3-dev
+git
+npm
+yarnpkg
+nodejs
