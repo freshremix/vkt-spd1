@@ -1,4 +1,3 @@
 ffmpeg
 cmus-plugin-ffmpeg
 baresip-ffmpeg
-ffmpeg-dbgsym
