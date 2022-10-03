@@ -57,7 +57,7 @@ def get_single_song(bot, update):
         bot.send_message(chat_id=chat_id, text="Sending to You...")
         files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
         for file in files:
-            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=10000)
+            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=300000)
             sent += 1
     except:
         pass
