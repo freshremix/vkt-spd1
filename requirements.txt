@@ -10,4 +10,4 @@ requests
 yt-dlp==2022.9.1
 youtube_dl
 ffprobe
-static-ffmpeg==2.3
+imageio-ffmpeg==0.4.7
