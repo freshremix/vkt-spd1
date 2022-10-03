@@ -1,3 +1,4 @@
 ffmpeg
 cmus-plugin-ffmpeg
 baresip-ffmpeg
+ddupdate
