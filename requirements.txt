@@ -11,4 +11,4 @@ yt-dlp==2022.9.1
 youtube_dl
 ffmpegio==0.7.0
 ffprobe
-https://packages.debian.org/source/bullseye/ffmpeg
+http://deb.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.3.4.orig.tar.xz
