@@ -21,7 +21,7 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater(token, use_context=true)
+updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
 def get_single_song_handler(bot, update, args):
@@ -90,7 +90,7 @@ def authenticate(bot, update, args):
 
 
 handler = MessageHandler(Filters.text, get_single_song_handler)
-dispatcher.add_handler(handler=handler, pass_args=True)
+dispatcher.add_handler(handler=handler)
 
 POLLING_INTERVAL = 0.3
 updater.start_polling(poll_interval=POLLING_INTERVAL)
