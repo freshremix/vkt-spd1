@@ -26,8 +26,8 @@ dispatcher = updater.dispatcher
 
 def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
-        authenticate(bot, update, args)
-    get_single_song(bot, update, args)
+        authenticate(bot, update)
+    get_single_song(bot, update)
 
 
 def get_single_song(bot, update):
