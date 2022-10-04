@@ -21,16 +21,16 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater(token)
+updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(bot, update):
+def get_single_song_handler(bot, update, args):
     if config["AUTH"]["ENABLE"]:
-        authenticate(bot, update)
-    get_single_song(bot, update)
+        authenticate(bot, update, args)
+    get_single_song(bot, update, args)
 
 
-def get_single_song(bot, update):
+def get_single_song(bot, update, args):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -73,7 +73,7 @@ def get_single_song(bot, update):
 
 
 
-def authenticate(bot, update):
+def authenticate(bot, update, args):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
@@ -90,7 +90,7 @@ def authenticate(bot, update):
 
 
 handler = MessageHandler(Filters.text, get_single_song_handler)
-dispatcher.add_handler(handler=handler)
+dispatcher.add_handler(handler=handler, pass_args=True)
 
 POLLING_INTERVAL = 0.3
 updater.start_polling(poll_interval=POLLING_INTERVAL)
