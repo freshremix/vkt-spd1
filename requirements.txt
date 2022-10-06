@@ -13,4 +13,4 @@ imageio-ffmpeg
 static-ffmpeg
 ffmpeg
 python-ffmpeg
-spotdl==3.9.6
+git+https://github.com/phcreery/spotify-downloader.git
