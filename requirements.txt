@@ -1,4 +1,4 @@
-pip
+pip==22.2.2
 streamlit
 python-telegram-bot==12.3.0
 python-dotenv
