@@ -14,4 +14,3 @@ imageio-ffmpeg
 static-ffmpeg
 ffmpeg
 python-ffmpeg
-ytmdl==2022.3.16
