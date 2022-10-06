@@ -6,11 +6,11 @@ pytube
 ytmusicapi
 spotipy
 requests
-yt-dlp
+ytdlp==2022.10.04
 youtube_dl
 ffprobe
 imageio-ffmpeg
 static-ffmpeg
 ffmpeg
 python-ffmpeg
-git+https://github.com/freshremix/spotify-downloader.git
+spotdl==3.9.6
