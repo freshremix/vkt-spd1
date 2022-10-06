@@ -11,4 +11,3 @@ youtube_dl
 ffprobe
 spotdl==3.9.6
 git+https://github.com/zackees/static_ffmpeg.git
-pip install https://packages.debian.org/source/bullseye/ffmpeg
