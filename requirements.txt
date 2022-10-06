@@ -9,9 +9,5 @@ requests
 git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 ffprobe
-imageio-ffmpeg
-static-ffmpeg
-ffmpeg
-python-ffmpeg
 spotdl==3.9.6
-git+https://github.com/deuteronomy-works/pyffmpeg.git
+git+https://github.com/zackees/static_ffmpeg.git
