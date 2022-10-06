@@ -10,5 +10,4 @@ git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 ffprobe
 spotdl==3.9.6
-git+https://git.ffmpeg.org/gitweb/ffmpeg.git/tag/1326fe9d4c85cca1ee774b072ef4fa337694f2e7
-git+https://git.ffmpeg.org/gitweb/ffmpeg.git/tag/51019e0ab2ec6517ae0a2dd666ef53368a780250
+http://deb.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_4.3.4-0+deb11u1.debian.tar.xz
