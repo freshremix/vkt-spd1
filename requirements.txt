@@ -11,3 +11,4 @@ youtube_dl
 ffprobe
 spotdl==3.9.6
 git+https://github.com/deuteronomy-works/pyffmpeg.git
+git clone --depth 1 git://source.ffmpeg.org/ffmpeg
