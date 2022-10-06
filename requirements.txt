@@ -6,7 +6,7 @@ pytube
 ytmusicapi
 spotipy
 requests
-ytdlp==2022.10.04
+git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 ffprobe
 imageio-ffmpeg
