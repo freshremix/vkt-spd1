@@ -1,5 +1,1 @@
-conda install -c conda-forge ffmpeg
-conda install -c "conda-forge/label/gcc7" ffmpeg
-conda install -c "conda-forge/label/broken" ffmpeg
-conda install -c "conda-forge/label/cf201901" ffmpeg
-conda install -c "conda-forge/label/cf202003" ffmpeg
+https://git.ffmpeg.org/ffmpeg.git
