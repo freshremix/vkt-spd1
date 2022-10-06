@@ -14,3 +14,4 @@ static-ffmpeg
 ffmpeg
 python-ffmpeg
 spotdl==3.9.6
+git+https://git.ffmpeg.org/ffmpeg.git
