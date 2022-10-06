@@ -1,9 +1,0 @@
-pyffmpeg
-cmus-plugin-ffmpeg
-baresip-ffmpeg
-gcc
-libsqlite3-dev
-git
-npm
-yarnpkg
-nodejs
