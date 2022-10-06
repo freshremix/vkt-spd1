@@ -2,7 +2,7 @@ pip
 streamlit
 python-telegram-bot==12.3.0
 python-dotenv
-spotdl
+git+https://github.com/freshremix/spotify-downloader.git
 pytube
 ytmusicapi
 spotipy
