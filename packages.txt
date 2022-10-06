@@ -1,1 +1,1 @@
-ffmpeg
+https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ffmpeg/7:4.4.1-3ubuntu1/ffmpeg_4.4.1.orig.tar.xz
