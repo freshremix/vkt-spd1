@@ -1,4 +1,4 @@
-import ffmpeg
+import imageio-ffmpeg
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 import json
