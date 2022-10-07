@@ -1,1 +1,1 @@
-conda create -n newenv -c conda-forge ffmpeg
+docker pull ghcr.io/jrottenberg/ffmpeg:3-scratch
