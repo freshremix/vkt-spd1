@@ -1,1 +1,1 @@
-docker pull ghcr.io/jrottenberg/ffmpeg:3-scratch
+dotnet add PROJECT package ffmpeg_x64-windows --version 4.4.1-vcpkg80322a59f749e00613863c0765f15e5fd0a160b89047d6a88549bb9cbd274068
