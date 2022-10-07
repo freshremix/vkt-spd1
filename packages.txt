@@ -6,7 +6,6 @@ ffmpegfs
 ffmpegthumbnailer
 ffmpegthumbnailer-dbg
 ffmpegthumbs
-merlin-encoders-ffmpeg
 libffmpeg-ocaml
 libffmpeg-ocaml-dev
 libffmpegthumbnailer-dev
