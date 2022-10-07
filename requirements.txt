@@ -10,5 +10,4 @@ git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 ffprobe
 spotdl==3.9.6
-git+https://github.com/deuteronomy-works/pyffmpeg.git
-git+https://github.com/zackees/static_ffmpeg.git
+git+https://github.com/PyAV-Org/pyav-ffmpeg@f40efda#pyav-ffmpeg=package-one
