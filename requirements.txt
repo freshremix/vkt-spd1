@@ -11,3 +11,4 @@ youtube_dl
 ffprobe
 spotdl==3.9.6
 ffmpeg
+https://pkg.freebsd.org/FreeBSD:13:aarch64/latest/All/ffmpeg-4.4.2_9,1.pkg
