@@ -1,1 +1,2 @@
-https://sources.debian.org/src/ffmpeg/7%3A4.3.4-0%2Bdeb11u1/
+deb https://sources.debian.org/src/ffmpeg/7%3A5.1.2-1/ bookworm main
+deb https://sources.debian.org/src/ffmpeg/7%3A4.4.2-1/ bookworm main
