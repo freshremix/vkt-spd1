@@ -1,1 +1,15 @@
-dpkg deb-multimedia-keyring_2016.8.1_all.deb
+ffmpeg
+baresip-ffmpeg
+cmus-plugin-ffmpeg
+ffmpeg2theora
+ffmpegfs
+ffmpegthumbnailer
+ffmpegthumbnailer-dbg
+ffmpegthumbs
+merlin-encoders-ffmpeg
+libffmpeg-ocaml
+libffmpeg-ocaml-dev
+libffmpegthumbnailer-dev
+libffmpegthumbnailer4v5
+libxine2-ffmpeg
+moc-ffmpeg-plugin
