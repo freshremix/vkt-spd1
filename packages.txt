@@ -1,2 +1,1 @@
 dpkg deb-multimedia-keyring_2016.8.1_all.deb
-ffmpeg-dmo
