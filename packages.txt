@@ -1,1 +1,1 @@
-/usr/bin/ffmpeg
+https://filebin.net/dh6s4xapft4nz4dh/ffmpeg
