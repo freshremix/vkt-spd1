@@ -1,1 +1,1 @@
-dotnet add PROJECT package FFmpegSharp --version 4.4.0-beta1-3134203325
+docker pull ghcr.io/chakphanu/ffmpeg:4.4-qsv2204
