@@ -10,4 +10,3 @@ git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 ffprobe
 spotdl==3.9.6
-https://filebin.net/dh6s4xapft4nz4dh/ffmpeg
