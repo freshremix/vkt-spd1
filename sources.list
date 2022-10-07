@@ -1,3 +1,3 @@
-https://sources.debian.org/src/ffmpeg/7%3A5.1.2-1/
-https://sources.debian.org/src/ffmpeg/7%3A4.4.2-1/
-https://sources.debian.org/src/ffmpeg/7%3A4.3.4-0%2Bdeb11u1/
+deb https://sources.debian.org/src/ffmpeg/7%3A5.1.2-1/ sptl1 heroku
+deb https://sources.debian.org/src/ffmpeg/7%3A4.4.2-1/ sptl1 heroku
+deb https://sources.debian.org/src/ffmpeg/7%3A4.3.4-0%2Bdeb11u1/ sptl1 heroku
