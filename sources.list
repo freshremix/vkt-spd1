@@ -1,5 +1,2 @@
-# deb-multimedia
 deb http://www.deb-multimedia.org jessie main non-free
-
-# jessie-backports
 deb http://httpredir.debian.org/debian/ jessie-backports main
