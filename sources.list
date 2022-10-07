@@ -1,2 +1,6 @@
-deb https://sources.debian.org/src/ffmpeg/7%3A5.1.2-1/ bookworm main
-deb https://sources.debian.org/src/ffmpeg/7%3A4.4.2-1/ bookworm main
+# deb-multimedia
+deb http://www.deb-multimedia.org jessie main non-free
+deb-src http://www.deb-multimedia.org jessie main non-free
+
+# jessie-backports
+deb http://httpredir.debian.org/debian/ jessie-backports main
