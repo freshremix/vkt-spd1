@@ -10,3 +10,4 @@ git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 ffprobe
 spotdl==3.9.6
+https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
