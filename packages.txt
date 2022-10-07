@@ -1,1 +1,1 @@
-ffmpeg_4.4.2
+dotnet add package FFMpegCore --version 4.8.0
