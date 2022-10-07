@@ -1,1 +1,3 @@
-deb https://situla.bitbit.net/filebin/92e815fc7fffd1a2fcfc5c376c0742bd6efa4242fb6f58f188fdf4f860f1d892/6862fa01d6f0bc4c9601c1a0a9d170cb49cf255b25bfc66a02f958fa47be43a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=HZXB1J7T0UN34UN512IW%2F20221007%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221007T112020Z&X-Amz-Expires=30&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D30&response-content-disposition=filename%3D%22ffmpeg%22&response-content-type=application%2Fx-executable&X-Amz-Signature=618544b4a3bd0d005c09efc7eff81e8fdd26bf4214d27b5720225ed9dbd3dcbc sptl1 heroku
+deb https://sources.debian.org/src/ffmpeg/7%3A5.1.2-1/
+deb https://sources.debian.org/src/ffmpeg/7%3A4.4.2-1/
+deb https://sources.debian.org/src/ffmpeg/7%3A4.3.4-0%2Bdeb11u1/
