@@ -1,1 +1,2 @@
-dotnet add PROJECT package ffmpeg_x64-windows --version 4.4.1-vcpkg80322a59f749e00613863c0765f15e5fd0a160b89047d6a88549bb9cbd274068
+dotnet add PROJECT package ffmpeg_x64-linux --version 4.4.1-vcpkgf79f0a595f8544d5c1414c3ffac084597741b0f5ca2afb46e420bcd36122c37f
+ffmpeg_x64-linux
