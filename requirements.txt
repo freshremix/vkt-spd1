@@ -11,4 +11,4 @@ youtube_dl
 ffprobe
 spotdl==3.9.6
 git+https://github.com/PyAV-Org/pyav-ffmpeg@f40efda#pyav-ffmpeg=package-one
-gcc
+gcc7
