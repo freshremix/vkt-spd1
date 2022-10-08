@@ -1,2 +1,2 @@
 deb http://security.debian.org/debian-security bullseye-security main
-https://launchpad.net/ffmpeg/master
+ppa:jonathonf/ffmpeg-4
