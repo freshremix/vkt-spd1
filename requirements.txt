@@ -10,3 +10,4 @@ youtube_dl
 spotdl==3.9.6
 ffmpeg-python
 streamlit
+deb-multimedia-keyring
