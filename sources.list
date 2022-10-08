@@ -1,3 +1,2 @@
 deb http://security.debian.org/debian-security bullseye-security main
 deb https://debian-mirrors.sdinet.de/deb-multimedia stable main
-deb https://deb-multimedia.org/pool/main/d/deb-multimedia-keyring/ stable main
