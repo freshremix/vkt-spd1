@@ -1,2 +1,1 @@
-ffmpeg-dmo
-deb-multimedia-keyring
+ffmpeg
