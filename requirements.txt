@@ -8,5 +8,5 @@ requests
 git+https://github.com/yt-dlp/yt-dlp.git
 youtube_dl
 spotdl==3.9.6
-ffmpeg-python
 streamlit
+imageio-ffmpeg
