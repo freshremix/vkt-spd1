@@ -1,8 +1,1 @@
 deb http://security.debian.org/debian-security bullseye-security main
-ppa:savoury1/build-tools
-ppa:savoury1/backports
-ppa:savoury1/fonts
-ppa:savoury1/graphics
-ppa:savoury1/multimedia
-ppa:savoury1/ffmpeg4
-ppa:savoury1/ffmpeg5
