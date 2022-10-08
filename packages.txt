@@ -1,14 +1,1 @@
 ffmpeg
-baresip-ffmpeg
-cmus-plugin-ffmpeg
-ffmpeg2theora
-ffmpegfs
-ffmpegthumbnailer
-ffmpegthumbnailer-dbg
-ffmpegthumbs
-libffmpeg-ocaml
-libffmpeg-ocaml-dev
-libffmpegthumbnailer-dev
-libffmpegthumbnailer4v5
-libxine2-ffmpeg
-moc-ffmpeg-plugin
