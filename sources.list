@@ -1,3 +1,2 @@
 deb http://security.debian.org/debian-security bullseye-security main
-ppa:jonathonf/ffmpeg-4
 deb https://ppa.launchpadcontent.net/jonathonf/ffmpeg-4/ubuntu bullseye main
