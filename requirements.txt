@@ -11,4 +11,4 @@ spotdl==3.9.6
 streamlit
 ffmpeg
 ffmpeg-python
-https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
+git+https://git.ffmpeg.org/ffmpeg.git
