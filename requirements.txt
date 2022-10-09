@@ -11,4 +11,4 @@ spotdl==3.9.6
 streamlit
 ffmpeg
 ffmpeg-python
-git+https://git.ffmpeg.org/ffmpeg.git
+git+https://github.com/kkroening/ffmpeg-python.git
