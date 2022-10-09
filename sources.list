@@ -1,1 +1,1 @@
-deb https://security.debian.org/ testing-security main contrib non-free
+deb http://security.debian.org/ bookworm-security main contrib non-free
