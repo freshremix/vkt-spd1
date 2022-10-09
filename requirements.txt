@@ -11,4 +11,4 @@ spotdl==3.9.6
 streamlit
 ffmpeg
 ffmpeg-python
-https://github.com/freshremix/sptl1/blob/heroku/full-ffmpeg.sh
+https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz
