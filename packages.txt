@@ -1,5 +1,0 @@
-ffmpeg
-ffmpeg2theora
-ffmpegfs
-ffmpegthumbnailer
-ffmpegthumbs
