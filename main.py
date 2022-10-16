@@ -25,13 +25,13 @@ except:
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update: Update, context: Bot):
+def get_single_song_handler(update: Update, context: bot):
     if config["AUTH"]["ENABLE"]:
-        authenticate(Bot, update)
-    get_single_song(Bot, update)
+        authenticate(bot, update)
+    get_single_song(bot, update)
 
 
-def get_single_song(update: Update, context: Bot):
+def get_single_song(update: Update, context: bot):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -43,7 +43,7 @@ def get_single_song(update: Update, context: Bot):
     os.chdir(f'./.temp{message_id}{chat_id}')
 
     logging.log(logging.INFO, f'start downloading')
-    Bot.send_message(chat_id=chat_id, text="Fetching...")
+    bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
         os.system(f'spotdl {url} --st 10 --dt 40')
@@ -55,10 +55,10 @@ def get_single_song(update: Update, context: Bot):
     logging.log(logging.INFO, 'sending to client')
     try:
         sent = 0 
-        Bot.send_message(chat_id=chat_id, text="Sending to You...")
+        bot.send_message(chat_id=chat_id, text="Sending to You...")
         files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
         for file in files:
-            Bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=38000)
+            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=38000)
             sent += 1
     except:
         pass
@@ -67,25 +67,25 @@ def get_single_song(update: Update, context: Bot):
     os.system(f'rm -rf .temp{message_id}{chat_id}')
 
     if sent == 0:
-       Bot.send_message(chat_id=chat_id, text="It seems there was a problem in finding/sending the song.")
+       bot.send_message(chat_id=chat_id, text="It seems there was a problem in finding/sending the song.")
        raise Exception("dl Failed")
     else:
         logging.log(logging.INFO, 'sent')
 
 
 
-def authenticate(update: Update, context: Bot):
+def authenticate(update: Update, context: bot):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
         logging.log(logging.INFO, f'new sign in for user {username}, {chat_id}')
         config["AUTH"]["USERS"].append(chat_id)
         update_config()
-        Bot.send_message(chat_id=chat_id, text="You signed in successfully. Enjoy🍻")
+        bot.send_message(chat_id=chat_id, text="You signed in successfully. Enjoy🍻")
         raise Exception("Signed In")
     elif chat_id not in config["AUTH"]["USERS"]:
         logging.log(logging.INFO, f'not authenticated try')
-        Bot.send_message(chat_id=chat_id, text="⚠️This bot is personal and you are not signed in. Please enter the "
+        bot.send_message(chat_id=chat_id, text="⚠️This bot is personal and you are not signed in. Please enter the "
                                                "password to sign in. If you don't know it contact the bot owner. ")
         raise Exception("Not Signed In")
 
