@@ -24,7 +24,7 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater('token')
+updater = Updater('token', use_context=True)
 dispatcher = updater.dispatcher
 
 def get_single_song_handler(update, bot):
@@ -41,7 +41,7 @@ def get_single_song(update, bot):
 
     url = "'" + update.effective_message.text + "'"
 
-    os.system(with tempfile.TemporaryDirectory() as .temp{message_id}{chat_id}')
+    os.system(f'mkdir -p .temp{message_id}{chat_id}')
     os.chdir(f'./.temp{message_id}{chat_id}')
 
     logging.log(logging.INFO, f'start downloading')
