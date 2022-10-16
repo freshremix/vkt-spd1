@@ -25,13 +25,13 @@ except:
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update: Bot.Update, context: Bot.ext.CallbackContext):
+def get_single_song_handler(update, context):
     if config["AUTH"]["ENABLE"]:
-        authenticate(context, update)
-    get_single_song(context, update)
+        authenticate(update, context)
+    get_single_song(update, context)
 
 
-def get_single_song(update: Bot.Update, context: Bot.ext.CallbackContext):
+def get_single_song(update, context):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -74,7 +74,7 @@ def get_single_song(update: Bot.Update, context: Bot.ext.CallbackContext):
 
 
 
-def authenticate(context, update):
+def authenticate(update, context):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
