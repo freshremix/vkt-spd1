@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 import json
