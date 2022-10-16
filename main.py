@@ -1,6 +1,6 @@
 from telegram.ext import Updater, MessageHandler, Filters, Handler
-from telegram import Bot
-from telegram import Update
+from telegram import bot
+from telegram import update
 import json
 import logging
 import os
@@ -25,13 +25,13 @@ except:
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update: Update, context: Bot):
+def get_single_song_handler(context, update):
     if config["AUTH"]["ENABLE"]:
         authenticate(context, update)
     get_single_song(context, update)
 
 
-def get_single_song(update: Update, context: Bot):
+def get_single_song(context, update):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
