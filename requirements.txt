@@ -1,5 +1,5 @@
 websockets
-pip==22.2.2
+pip
 python-telegram-bot
 python-dotenv
 pytube
@@ -9,4 +9,4 @@ requests
 youtube_dl
 spotdl==3.9.6
 streamlit
-imageio-ffmpeg==0.4.7
+imageio-ffmpeg
