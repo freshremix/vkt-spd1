@@ -26,13 +26,13 @@ except:
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update, context):
+def get_single_song_handler(update, bot):
     if config["AUTH"]["ENABLE"]:
-        authenticate(update, context)
-    get_single_song(update, context)
+        authenticate(update, bot)
+    get_single_song(update, bot)
 
 
-def get_single_song(update, context):
+def get_single_song(update, bot):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -75,7 +75,7 @@ def get_single_song(update, context):
 
 
 
-def authenticate(update, context):
+def authenticate(update, bot):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
