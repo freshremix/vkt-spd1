@@ -25,13 +25,13 @@ except:
 updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update: Update, context: CallbackContext):
+def get_single_song_handler(`update: Update, context: CallbackContext`):
     if config["AUTH"]["ENABLE"]:
         authenticate(context, update)
     get_single_song(context, update)
 
 
-def get_single_song(update: Update, context: CallbackContext):
+def get_single_song(`update: Update, context: CallbackContext`):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
