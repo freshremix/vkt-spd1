@@ -74,14 +74,14 @@ def get_single_song(update, context):
 
 
 
-def authenticate(update, context):
+def authenticate(update: Update, context: CallbackContext):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
         logging.log(logging.INFO, f'new sign in for user {username}, {chat_id}')
         config["AUTH"]["USERS"].append(chat_id)
         update_config()
-        context.send_message(chat_id=chat_id, text="You signed in successfully. Enjoy🍻")
+        bot.send_message(chat_id=chat_id, text="You signed in successfully. Enjoy🍻")
         raise Exception("Signed In")
     elif chat_id not in config["AUTH"]["USERS"]:
         logging.log(logging.INFO, f'not authenticated try')
