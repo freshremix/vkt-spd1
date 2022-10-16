@@ -74,7 +74,7 @@ def get_single_song(update: Update, context: Bot):
 
 
 
-def authenticate(update: Update, context: Bot):
+def authenticate(context, update):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
