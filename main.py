@@ -4,9 +4,6 @@ import json
 import logging
 import os
 from dotenv import dotenv_values
-import youtube_dl
-import tempfile
-import requests
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
@@ -24,16 +21,16 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater('token')
+updater = Updater(token)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update, bot):
+def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
-        authenticate(update, bot)
-    get_single_song(update, bot)
+        authenticate(bot, update)
+    get_single_song(bot, update)
 
-    
-def get_single_song(update, bot):
+
+def get_single_song(bot, update):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -48,7 +45,7 @@ def get_single_song(update, bot):
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl {url} --st 10 --dt 32')
+        os.system(f'spotdl {url} --st 10 --dt 25')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
@@ -76,7 +73,7 @@ def get_single_song(update, bot):
 
 
 
-def authenticate(update, bot):
+def authenticate(bot, update):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
