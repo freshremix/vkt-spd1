@@ -27,8 +27,8 @@ dispatcher = updater.dispatcher
 
 def get_single_song_handler(update: Update, context: Bot):
     if config["AUTH"]["ENABLE"]:
-        authenticate(bot, update)
-    get_single_song(bot, update)
+        authenticate(Bot, update)
+    get_single_song(Bot, update)
 
 
 def get_single_song(update: Update, context: Bot):
@@ -43,7 +43,7 @@ def get_single_song(update: Update, context: Bot):
     os.chdir(f'./.temp{message_id}{chat_id}')
 
     logging.log(logging.INFO, f'start downloading')
-    bot.send_message(chat_id=chat_id, text="Fetching...")
+    Bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
         os.system(f'spotdl {url} --st 10 --dt 40')
@@ -55,10 +55,10 @@ def get_single_song(update: Update, context: Bot):
     logging.log(logging.INFO, 'sending to client')
     try:
         sent = 0 
-        bot.send_message(chat_id=chat_id, text="Sending to You...")
+        Bot.send_message(chat_id=chat_id, text="Sending to You...")
         files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
         for file in files:
-            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=38000)
+            Bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=38000)
             sent += 1
     except:
         pass
@@ -67,7 +67,7 @@ def get_single_song(update: Update, context: Bot):
     os.system(f'rm -rf .temp{message_id}{chat_id}')
 
     if sent == 0:
-       bot.send_message(chat_id=chat_id, text="It seems there was a problem in finding/sending the song.")
+       Bot.send_message(chat_id=chat_id, text="It seems there was a problem in finding/sending the song.")
        raise Exception("dl Failed")
     else:
         logging.log(logging.INFO, 'sent')
@@ -81,11 +81,11 @@ def authenticate(update: Update, context: Bot):
         logging.log(logging.INFO, f'new sign in for user {username}, {chat_id}')
         config["AUTH"]["USERS"].append(chat_id)
         update_config()
-        bot.send_message(chat_id=chat_id, text="You signed in successfully. Enjoy🍻")
+        Bot.send_message(chat_id=chat_id, text="You signed in successfully. Enjoy🍻")
         raise Exception("Signed In")
     elif chat_id not in config["AUTH"]["USERS"]:
         logging.log(logging.INFO, f'not authenticated try')
-        bot.send_message(chat_id=chat_id, text="⚠️This bot is personal and you are not signed in. Please enter the "
+        Bot.send_message(chat_id=chat_id, text="⚠️This bot is personal and you are not signed in. Please enter the "
                                                "password to sign in. If you don't know it contact the bot owner. ")
         raise Exception("Not Signed In")
 
