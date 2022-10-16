@@ -24,13 +24,13 @@ except:
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update, bot):
+def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
-        authenticate(update, bot)
-    get_single_song(update, bot)
+        authenticate(bot, update)
+    get_single_song(bot, update)
 
 
-def get_single_song(update, bot):
+def get_single_song(bot, update):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -57,7 +57,7 @@ def get_single_song(update, bot):
         bot.send_message(chat_id=chat_id, text="Sending to You...")
         files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
         for file in files:
-            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'))
+            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=38000)
             sent += 1
     except:
         pass
@@ -73,7 +73,7 @@ def get_single_song(update, bot):
 
 
 
-def authenticate(update, bot):
+def authenticate(bot, update):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
