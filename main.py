@@ -24,7 +24,7 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater('token', use_context=False)
+updater = Updater('token')
 dispatcher = updater.dispatcher
 
 def get_single_song_handler(update, bot):
