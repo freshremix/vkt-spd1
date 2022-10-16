@@ -74,7 +74,7 @@ def get_single_song(update, context):
 
 
 
-def authenticate(update: Update, context: CallbackContext):
+def authenticate(update, context):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
