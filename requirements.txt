@@ -1,6 +1,6 @@
 websockets
 pip==22.2.2
-python-telegram-bot==12.3.0
+python-telegram-bot
 python-dotenv
 pytube
 ytmusicapi
