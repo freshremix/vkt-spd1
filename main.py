@@ -22,16 +22,16 @@ try:
 except:
     token = os.environ['TELEGRAM_TOKEN']
 
-updater = Updater(token, use_context=False)
+updater = Updater(token, use_context=True)
 dispatcher = updater.dispatcher
 
-def get_single_song_handler(update, context):
+def get_single_song_handler(context, update):
     if config["AUTH"]["ENABLE"]:
-        authenticate(update, context)
-    get_single_song(update, context)
+        authenticate(context, update)
+    get_single_song(context, update)
 
 
-def get_single_song(update, context):
+def get_single_song(context, update):
     chat_id = update.effective_message.chat_id
     message_id = update.effective_message.message_id
     username = update.message.chat.username
@@ -74,7 +74,7 @@ def get_single_song(update, context):
 
 
 
-def authenticate(update, context):
+def authenticate(context, update):
     username = update.message.chat.username
     chat_id = update.effective_message.chat_id
     if update.effective_message.text == config["AUTH"]["PASSWORD"]:
@@ -88,7 +88,6 @@ def authenticate(update, context):
         bot.send_message(chat_id=chat_id, text="⚠️This bot is personal and you are not signed in. Please enter the "
                                                "password to sign in. If you don't know it contact the bot owner. ")
         raise Exception("Not Signed In")
-
 
 handler = MessageHandler(Filters.text, get_single_song_handler)
 dispatcher.add_handler(handler=handler)
