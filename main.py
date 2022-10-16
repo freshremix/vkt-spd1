@@ -3,7 +3,7 @@
 from telegram.ext import Updater, MessageHandler, Filters, Handler
 from telegram import Bot
 from telegram import Update
-from telegram import CallbackContext
+import CallbackContext
 import json
 import logging
 import os
