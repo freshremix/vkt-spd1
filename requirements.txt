@@ -7,6 +7,6 @@ ytmusicapi
 spotipy
 requests
 youtube_dl
-spotdl==3.9.6
+spotdl==4.0.0rc5
 streamlit
 imageio-ffmpeg
