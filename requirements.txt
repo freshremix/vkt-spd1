@@ -10,3 +10,4 @@ spotdl==4.0.0rc5
 streamlit
 imageio-ffmpeg
 yt-dlp
+youtube_dl
