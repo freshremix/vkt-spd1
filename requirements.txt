@@ -5,3 +5,4 @@ python-dotenv
 spotdl==4.0.1
 yt-dlp
 youtube_dl
+imageio-ffmpeg==0.4.7
