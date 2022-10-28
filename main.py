@@ -24,6 +24,8 @@ except:
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
+os.system(f'spotdl --download-ffmpeg')
+
 def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
         authenticate(bot, update)
@@ -45,7 +47,6 @@ def get_single_song(bot, update):
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl --download-ffmpeg')
         os.system(f'spotdl download {url} --ffmpeg /home/appuser/.spotdl/ffmpeg --bitrate 320k --threads 32 --lyrics genius')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
