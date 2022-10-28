@@ -45,7 +45,7 @@ def get_single_song(bot, update):
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl download {url} --lyrics genius --bitrate 320k --threads 20')
+        os.system(f'spotdl download {url} --ffmpeg /root/.spotdl/ffmpeg --bitrate 320k --threads 32 --lyrics genius')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
@@ -57,7 +57,7 @@ def get_single_song(bot, update):
         bot.send_message(chat_id=chat_id, text="Sending to You...")
         files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
         for file in files:
-            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=10000)
+            bot.send_audio(chat_id=chat_id, audio=open(f'./{file}', 'rb'), timeout=25000)
             sent += 1
     except:
         pass
@@ -92,6 +92,6 @@ def authenticate(bot, update):
 handler = MessageHandler(Filters.text, get_single_song_handler)
 dispatcher.add_handler(handler=handler)
 
-POLLING_INTERVAL = 2.8
+POLLING_INTERVAL = 8.8
 updater.start_polling(poll_interval=POLLING_INTERVAL)
 updater.idle()
