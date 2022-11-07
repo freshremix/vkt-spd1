@@ -24,8 +24,6 @@ except:
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
-os.system(f'spotdl --download-ffmpeg')
-
 def get_single_song_handler(bot, update):
     if config["AUTH"]["ENABLE"]:
         authenticate(bot, update)
