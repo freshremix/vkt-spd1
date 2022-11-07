@@ -2,5 +2,5 @@ streamlit
 pip
 python-telegram-bot==12.3.0
 python-dotenv
-spotdl==4.0.1
+pip install https://github.com/spot4s1/spotify-downloader/archive/refs/heads/master.zip
 imageio-ffmpeg==0.4.7
