@@ -4,4 +4,4 @@ python-telegram-bot==12.3.0
 python-dotenv
 https://codeload.github.com/spot4s1/spotify-downloader/zip/refs/heads/master
 imageio-ffmpeg==0.4.7
-yt-dlp
+youtube_dl
