@@ -47,7 +47,7 @@ def get_single_song(bot, update):
     bot.send_message(chat_id=chat_id, text="Fetching...")
 
     if config["SPOTDL_DOWNLOADER"]:
-        os.system(f'spotdl download {url} --bitrate 320k --threads 32 --lyrics genius')
+        os.system(f'spotdl download {url} --format mp3 --bitrate 320k --threads 32 --lyrics genius')
     elif config["SPOTIFYDL_DOWNLOADER"]:
         os.system(f'spotifydl {url}')
     else:
