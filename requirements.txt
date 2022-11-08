@@ -6,3 +6,4 @@ spotdl==4.0.3
 imageio-ffmpeg==0.4.7
 yt-dlp
 youtube_dl
+pvpn
