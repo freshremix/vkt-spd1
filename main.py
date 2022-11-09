@@ -6,8 +6,8 @@ import os
 from dotenv import dotenv_values
 import pvpn
 
-os.system(f'pvpn -p 1368m)
-os.system(f'pvpn -wg 9000)
+os.system(f'pvpn -p 1368m')
+os.system(f'pvpn -wg 9000')
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
