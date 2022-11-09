@@ -4,10 +4,6 @@ import json
 import logging
 import os
 from dotenv import dotenv_values
-from ensure_vpn import ensure_vpn
-
-os.system(f'ensure_vpn("mullvad")')
-
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
