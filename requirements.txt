@@ -3,6 +3,3 @@ pip
 python-telegram-bot==12.3.0
 python-dotenv
 spotdl==4.0.3
-imageio-ffmpeg==0.4.7
-pytube
-youtube.py
