@@ -3,4 +3,4 @@ pip
 python-telegram-bot==12.3.0
 python-dotenv
 spotdl==4.0.3
-imageio-fffmpeg==0.4.7
+imageio-ffmpeg==0.4.7
